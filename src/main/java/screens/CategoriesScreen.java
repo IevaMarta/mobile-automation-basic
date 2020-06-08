@@ -22,10 +22,24 @@ public class CategoriesScreen extends BaseScreen {
     addElement("latinAmerican", "xpath", "//*[@text='Latin American']");
     addElement("nativeAmerican", "xpath", "//*[@text='Native American']");
     addElement("pacificIslandsOceania", "xpath", "//*[@text='Pacific Islands & Oceania']");
+    addElement("camerasPhoto", "xpath", "//*[@text='Cameras & Photo']");
+    addElement("camcorders", "xpath", "//*[@text='Camcorders']");
+    addElement("cameraDrones", "xpath", "//*[@text='Camera Drones']");
+    addElement("digitalCameras", "xpath", "//*[@text='Digital Cameras']");
+    addElement("filmPhotography", "xpath", "//*[@text='Film Photography']");
   }
   // Base Methods
   @Override
   public AppiumElement getMainElement(){
     return getElement("categoriesTitle");
   }
+
+  @Override
+  public void navigate(String element){
+    switch (element){
+      case "digitalCameras" : ScreenManager.setCurrentPage(ScreenManager.getDigitalCamerasScreen());break;
+      default          : super.navigate(element);
+    }
+  }
+
 }

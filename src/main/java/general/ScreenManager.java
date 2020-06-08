@@ -16,6 +16,13 @@ public class ScreenManager {
   private static CategoriesScreen categoriesScreen;
   private static CreateAnAccountScreen createAnAccountScreen;
   private static RegisterScreen registerScreen;
+  private static DigitalCamerasScreen digitalCamerasScreen;
+  private static NikonDigitalCamerasScreen nikonDigitalCamerasScreen;
+  private static NikonDDigitalCameraScreen nikonDDigitalCameraScreen;
+  private static NikonD5600DigitalCamerasScreen nikonD5600DigitalCamerasScreen;
+  private static SettingsScreen settingsScreen;
+  private static CountryOrRegionScreen countryOrRegionScreen;
+
   // Methods
   public static void initPages(){
     homeScreen = new HomeScreen(driver);
@@ -27,6 +34,12 @@ public class ScreenManager {
     categoriesScreen = new CategoriesScreen(driver);
     createAnAccountScreen = new CreateAnAccountScreen(driver);
     registerScreen = new RegisterScreen(driver);
+    digitalCamerasScreen = new DigitalCamerasScreen(driver);
+    nikonDigitalCamerasScreen = new NikonDigitalCamerasScreen(driver);
+    nikonDDigitalCameraScreen = new NikonDDigitalCameraScreen(driver);
+    nikonD5600DigitalCamerasScreen = new NikonD5600DigitalCamerasScreen(driver);
+    settingsScreen = new SettingsScreen(driver);
+    countryOrRegionScreen = new CountryOrRegionScreen(driver);
   }
   public static void setDriver(AppiumDriver driver){
     ScreenManager.driver = driver;
@@ -53,4 +66,10 @@ public class ScreenManager {
   public static CategoriesScreen getCategoriesScreen() { return categoriesScreen; }
   public static CreateAnAccountScreen getCreateAnAccountScreen() { return createAnAccountScreen; }
   public static RegisterScreen getRegisterScreen() { return registerScreen; }
+  public static DigitalCamerasScreen getDigitalCamerasScreen() {return digitalCamerasScreen; }
+  public static NikonDigitalCamerasScreen getNikonDigitalCamerasScreen() {return nikonDigitalCamerasScreen; }
+  public static NikonDDigitalCameraScreen getNikonDDigitalCameraScreen() {return nikonDDigitalCameraScreen; }
+  public static NikonD5600DigitalCamerasScreen getNikonD5600DigitalCamerasScreen() {return nikonD5600DigitalCamerasScreen; }
+  public static SettingsScreen getSettingsScreen() {return settingsScreen; }
+  public static CountryOrRegionScreen getCountryOrRegionScreen() {return countryOrRegionScreen; }
 }

@@ -61,4 +61,8 @@ public class AppiumElement {
     info("Finding: " + key);
     return (AndroidElement) driver.findElement(by, using);
   }
+
+  public String getText() {
+    return driver.findElement(by, using).getText();
+  }
 }
